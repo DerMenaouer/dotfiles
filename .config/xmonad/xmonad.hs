@@ -29,6 +29,7 @@ import XMonad.Hooks.WindowSwallowing
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Run
 import XMonad.Util.EZConfig (mkKeymap)
+import XMonad.Util.EZConfig (additionalMouseBindings)
 
 -- Layouts
 import XMonad.Layout.Spacing
@@ -351,7 +352,9 @@ main = do
           , ppUrgent  = xmobarColor color01 "" . shorten 60
           , ppVisible = xmobarColor color01 "" . clickable
           }
-      }
+      } `additionalMouseBindings`
+        [ ((0, 8), \_ -> spawn "xdotool key shift+z")
+        ]
       where
         num :: String -> String
         num = xmobarColor color05 colorBk
