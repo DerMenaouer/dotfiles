@@ -18,8 +18,6 @@ o.shiftwidth = 4
 o.wrap = true
 o.textwidth = 80 
 o.softtabstop = -1
-
-
 o.ignorecase = true
 o.smartcase = true
 
