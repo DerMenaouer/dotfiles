@@ -1,0 +1,210 @@
+/* GTK NAMED COLORS
+   ----------------
+   Pure Black Low-Contrast OLED Theme */
+
+@define-color theme_fg_color #484848;
+@define-color theme_text_color #484848;
+@define-color theme_bg_color #000000;
+@define-color theme_base_color #000000;
+@define-color theme_selected_bg_color #181818;
+@define-color theme_selected_fg_color #888888;
+@define-color insensitive_bg_color #000000;
+@define-color insensitive_fg_color #282828;
+@define-color insensitive_base_color #000000;
+@define-color theme_unfocused_fg_color #484848;
+@define-color theme_unfocused_text_color #484848;
+@define-color theme_unfocused_bg_color #000000;
+@define-color theme_unfocused_base_color #000000;
+@define-color theme_unfocused_selected_bg_color #181818;
+@define-color theme_unfocused_selected_fg_color #888888;
+@define-color borders #1c1c1c;
+@define-color unfocused_borders #151515;
+
+/* Libadwaita Compat */
+@define-color window_bg_color #000000;
+@define-color window_fg_color #484848;
+@define-color view_bg_color #000000;
+@define-color view_fg_color #484848;
+@define-color headerbar_bg_color #000000;
+@define-color headerbar_fg_color #484848;
+@define-color headerbar_border_color #1c1c1c;
+@define-color card_bg_color #000000;
+@define-color card_fg_color #484848;
+@define-color dialog_bg_color #000000;
+@define-color dialog_fg_color #484848;
+@define-color popover_bg_color #000000;
+@define-color popover_fg_color #484848;
+
+/*******************
+ * Base & Windows  *
+ *******************/
+* {
+  background-clip: padding-box;
+}
+
+window,
+.background,
+.view,
+textview text,
+iconview,
+treeview,
+label {
+  background-color: #000000;
+  color: #484848;
+}
+
+/*******************
+ * Menus & Menubar *
+ *******************/
+menubar,
+.menubar {
+  background-color: #000000;
+  color: #484848;
+  padding: 2px 4px;
+  border-bottom: 1px solid #1c1c1c;
+}
+
+menubar > menuitem,
+.menubar > menuitem,
+menubar label,
+.menubar label,
+menubar > menuitem > label {
+  color: #484848;
+}
+
+menubar > menuitem:hover,
+.menubar > menuitem:hover,
+menubar > menuitem:hover label {
+  background-color: #181818;
+  color: #888888;
+}
+
+menu,
+.menu,
+popover {
+  background-color: #000000;
+  color: #484848;
+  border: 1px solid #1c1c1c;
+  padding: 4px;
+}
+
+menuitem,
+menuitem label {
+  color: #484848;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+menuitem:hover,
+menuitem:hover label {
+  background-color: #181818;
+  color: #888888;
+}
+
+/********************
+ * Toolbars & Header *
+ ********************/
+toolbar,
+.toolbar,
+headerbar {
+  background-color: #000000;
+  color: #484848;
+  border-bottom: 1px solid #1c1c1c;
+  padding: 4px;
+}
+
+/********************
+ * Sidebar & Places *
+ ********************/
+.sidebar,
+stacksidebar,
+placessidebar {
+  background-color: #000000;
+  color: #484848;
+  border-right: 1px solid #1c1c1c;
+}
+
+.sidebar row:selected,
+placessidebar row:selected {
+  background-color: #181818;
+  color: #888888;
+}
+
+/*********************
+ * Buttons & Inputs  *
+ *********************/
+button {
+  background-color: #050505;
+  color: #484848;
+  border: 1px solid #1c1c1c;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+button:hover {
+  background-color: #181818;
+  border-color: #282828;
+  color: #888888;
+}
+
+button:active,
+button:checked {
+  background-color: #1c1c1c;
+  color: #aaaaaa;
+}
+
+entry {
+  background-color: #000000;
+  color: #484848;
+  border: 1px solid #1c1c1c;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+entry:focus {
+  border-color: #333333;
+}
+
+/*********************
+ * Selection States  *
+ *********************/
+selection,
+*:selected,
+.view:selected,
+iconview:selected,
+treeview:selected,
+row:selected,
+entry selection,
+textview text selection {
+  background-color: #181818;
+  color: #888888;
+}
+
+/* Fixes labels rendering pure black background when selected in PCManFM */
+*:selected label,
+row:selected label,
+treeview:selected label,
+iconview:selected label,
+.view:selected label {
+  background-color: transparent;
+  color: #888888;
+}
+
+/* Selection rectangle box when dragging with mouse */
+rubberband,
+.rubberband,
+flowbox rubberband,
+treeview.view rubberband {
+  background-color: rgba(24, 24, 24, 0.6);
+  border: 1px solid #333333;
+}
+
+/*********************
+ * Status & Footers  *
+ *********************/
+statusbar {
+  padding: 4px;
+  color: #484848;
+  background-color: #000000;
+  border-top: 1px solid #1c1c1c;
+}
