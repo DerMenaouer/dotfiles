@@ -2,11 +2,10 @@
 -- COLORSCHEMES
 -------------------------------------------------
 local ok, _ = pcall(vim.cmd, 'colorscheme base16-tokyo-night-dark')
--- monokai
--- nord
+-- black')
 -- oceanicnext
 -- solarized-dark
--- solarized-light
+-- tokyo-night-dark
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = num_au,
