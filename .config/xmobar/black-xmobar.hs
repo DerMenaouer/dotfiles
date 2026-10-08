@@ -6,8 +6,8 @@ Config {
                         , "Monoki Nerd Font 22"
                         , "Monoki Nerd Font 13"
                         ]
-    , bgColor =      "#2d2a2e"
-    , fgColor =      "#221f22"
+    , bgColor =      "#1a1b26"
+    , fgColor =      "#a9b1d6"
     , position =     TopH 20
     , lowerOnStart =     True    -- send to bottom of window stack on start
     , hideOnStart =      False   -- start with window unmapped (hidden)
@@ -50,4 +50,4 @@ Config {
       -- layout
     , sepChar =  "%"
     , alignSep = "}{"
-    , template = " <fc=#ff6188>%logo%</fc> | %UnsafeStdinReader% }{ <fn=1><fc=#ab9df2>%playing%</fc></fn>  <fc=#ab9df2>%pacupicon%  %pacup%</fc> | <fc=#78dce8>%cpu%</fc> | <fc=#78dce8>%cpu-temp-icon%%cpu-temp%</fc> | <fc=#a9dc76>%disku%</fc> | <fc=#ffd866>%memory%</fc> | <fc=#ffd866>%enp34s0%</fc> | <fc=#fc9867>%date%</fc> | <fc=#ff6188>%volicon% %vol%</fc> | <fc=#ff6188>%kbdicon%%kbd%</fc> "
+    , template = " <fc=#484848>%logo%</fc> | %UnsafeStdinReader% }{ <fn=1><fc=#484848>%playing%</fc></fn>  <fc=#484848>%pacupicon%  %pacup%</fc> | <fc=#484848>%cpu%</fc> | <fc=#484848>%cpu-temp-icon%%cpu-temp%</fc> | <fc=#484848>%disku%</fc> | <fc=#484848>%memory%</fc> | <fc=#484848>%enp34s0%</fc> | <fc=#484848>%date%</fc> | <fc=#484848>%volicon% %vol%</fc> | <fc=#484848>%kbdicon%%kbd%</fc> "
