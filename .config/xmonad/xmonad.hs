@@ -203,6 +203,7 @@ myKeys conf = mkKeymap conf $
     , ("M-\\"              , spawn "~/.local/bin/toggle-keylay")  -- swap Keyboard layout
     , ("<Print>"           , spawn "~/.local/bin/screen-clip")    -- screenshot + save to clip
     , ("M-l w"             , spawn "~/.local/bin/set-wallpaper")  -- set wallpaper
+    , ("M-l q"             , spawn ".local/bin/random-verse")            -- dmenu Random Verse
 
     -- KB_group Dmenu Scripts
     , ("M-p e"             , spawn "~/.config/dmscripts/dm-editconf")    -- dmenu config files
@@ -215,7 +216,6 @@ myKeys conf = mkKeymap conf $
     , ("M-p c"             , spawn "~/.config/dmscripts/dm-colorscheme") -- dmenu Colorscheme
     , ("M-p f"             , spawn "~/.config/dmscripts/dm-font")        -- dmenu Font
     , ("M-p a"             , spawn "~/.config/dmscripts/dm-sound")       -- dmenu Select Sound
-    , ("M-p q"             , spawn ".local/bin/random-verse")            -- dmenu Random Verse
     , ("M-p y"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-bluetooth")  -- dmenu Bluetooth
     , ("M-p p"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-power")      -- dmenu Power
     , ("M-p w"             , spawnAndDo doWeatherBox "~/.config/dmscripts/dm-weather") -- dmenu Check weather
