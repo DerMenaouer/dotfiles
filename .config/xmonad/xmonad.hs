@@ -189,15 +189,15 @@ myKeys conf = mkKeymap conf $
     , ("M-S-<Tab>"         , setLayout $ XMonad.layoutHook conf) -- reset Layout
     , ("M-S-0"             , withFocused $ windows . W.sink)     -- back from Float to Layouts
 
-    , ("M-S-r"             , refresh)                    -- correct window-size
-    , ("M-j"               , windows W.focusDown)        -- focus on next window
-    , ("M-k"               , windows W.focusUp)          -- focus on previous window
-    , ("M-S-m"             , windows W.focusMaster)      -- focus on master window
-    , ("M-S-c"             , kill)                       -- kill Window
+    , ("M-S-r"             , refresh)                     -- correct window-size
+    , ("M-j"               , windows W.focusDown)         -- focus on next window
+    , ("M-k"               , windows W.focusUp)           -- focus on previous window
+    , ("M-S-m"             , windows W.focusMaster)       -- focus on master window
+    , ("M-S-c"             , kill)                        -- kill Window
     , ("M-S-f"             , sendMessage (Toggle "Full")) -- fullscreen Window
-    , ("M-S-j"             , windows W.swapDown)         -- Swap to next window
-    , ("M-S-k"             , windows W.swapUp)           -- Swap to previous window
-    , ("M-S-<End>"         , spawn "xset dpms force off")-- Shuts down screen
+    , ("M-S-j"             , windows W.swapDown)          -- Swap to next window
+    , ("M-S-k"             , windows W.swapUp)            -- Swap to previous window
+    , ("M-S-<End>"         , spawn "xset dpms force off") -- Shuts down screen
     
     -- KB_group Scripts
     , ("M-\\"              , spawn "~/.local/bin/toggle-keylay")  -- swap Keyboard layout
@@ -215,6 +215,7 @@ myKeys conf = mkKeymap conf $
     , ("M-p c"             , spawn "~/.config/dmscripts/dm-colorscheme") -- dmenu Colorscheme
     , ("M-p f"             , spawn "~/.config/dmscripts/dm-font")        -- dmenu Font
     , ("M-p a"             , spawn "~/.config/dmscripts/dm-sound")       -- dmenu Select Sound
+    , ("M-p q"             , spawn ".local/bin/random-verse")            -- dmenu Random Verse
     , ("M-p y"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-bluetooth")  -- dmenu Bluetooth
     , ("M-p p"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-power")      -- dmenu Power
     , ("M-p w"             , spawnAndDo doWeatherBox "~/.config/dmscripts/dm-weather") -- dmenu Check weather
@@ -271,6 +272,7 @@ myManageHook = composeAll
     , className =? "Brave-origin"       --> doShift ( myWorkspaces !! 1 )
     , className =? "Pcmanfm"            --> doShift ( myWorkspaces !! 2 )
     , className =? "mpv"                --> doShift ( myWorkspaces !! 4 )
+    , className =? "pcloud"             --> doShift ( myWorkspaces !! 5 )
     , className =? "Alacritty" <&&> title =? "password"
                                         --> doPassBox
     , className =? "libreoffice-startcenter"  
@@ -300,7 +302,7 @@ myStartupHook = do
   spawnOnce "~/.fehbg &"
   spawnOnce "xsetroot -cursor_name left_ptr &"
   spawnOnce "xsettingsd &"
-  spawnOnce "pcloud &"
+  spawnOnce "pgrep -x pcloud || pcloud &"
   spawnOnce "synclient TapButton1=1" -- for touchpad click
 
 ------------------------------------------------------------------------
