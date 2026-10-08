@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 case "$1" in
-'TokyoNight')     icon="einfach-sun";;
+'Black')          icon="einfach";;
 'OceanicNext')    icon="einfach-doder";;
-'Monokai')        icon="einfach";;
-'Nord')           icon="einfach-ruby";;
+# 'Monokai')        icon="einfach";;
+# 'Nord')           icon="einfach-ruby";;
 'SolarizedDark')  icon="solarized-deluxe-iconpack";;
-'SolarizedLight') icon="solarized-deluxe-iconpack";;
+'TokyoNight')     icon="einfach-sun";;
 esac
 
 echo "$icon"

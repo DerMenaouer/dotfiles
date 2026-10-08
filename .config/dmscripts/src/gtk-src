@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
 case "$1" in
-'TokyoNight')     gtk="Tokyo-Night";;
+'Black')          gtk="Black";;
 'OceanicNext')    gtk="Oceanic-Next";;
-'Monokai')        gtk="Monokai";;
-'Nord')           gtk="Nord";;
 'SolarizedDark')  gtk="Solarized-Dark";;
-'SolarizedLight') gtk="Numix-Solarized-Light";;
+'TokyoNight')     gtk="Tokyo-Night";;
 esac
 
 echo "$gtk"

@@ -50,10 +50,8 @@ websearch[Duden]="https://www.duden.de/suchen/dudenonline/"
 
 
 declare -Ag color_scheme
-color_scheme[Monokai]="monokai"
-color_scheme[Nord]="nord"
+color_scheme[Black]="black"
 color_scheme[SolarizedDark]="solarized-dark"
-color_scheme[SolarizedLight]="solarized-light"
 color_scheme[OceanicNext]="oceanic-next"
 color_scheme[TokyoNight]="tokyo-night"
 
