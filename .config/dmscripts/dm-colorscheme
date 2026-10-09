@@ -16,6 +16,7 @@ if [ "$choice" ]; then
     sed -i -e "s/\/ThemeName.*/\/ThemeName \"$gtk_theme\"/g; s/IconThemeName.*/IconThemeName \"$icon_theme\"/g" "$HOME"/.xsettingsd && killall -HUP xsettingsd || echo "Cannot modify xsettingsd"
     ## XMONAD
     sed  -i "s/import Colors.*/import Colors.$choice/g" "$HOME"/.config/xmonad/xmonad.hs || echo "Cannot modify xmonad.hs"
+    feh --bg-fill $HOME/wallpapers/"$choice".jpg
     xmonad --restart || echo "Xmonad not running"
 else
   echo "Program terminated." && exit 0
