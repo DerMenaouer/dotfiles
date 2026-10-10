@@ -216,11 +216,11 @@ myKeys conf = mkKeymap conf $
     , ("M-p c"             , spawn "~/.config/dmscripts/dm-colorscheme") -- dmenu Colorscheme
     , ("M-p f"             , spawn "~/.config/dmscripts/dm-font")        -- dmenu Font
     , ("M-p a"             , spawn "~/.config/dmscripts/dm-sound")       -- dmenu Select Sound
-    , ("M-p y"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-bluetooth")  -- dmenu Bluetooth
+    , ("M-p y"             , spawn "~/.config/dmscripts/dm-youtube")     -- dmenu Watch or Download Youtube
+    , ("M-p w"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-wireless")   -- dmenu Bluetooth/Wifi
     , ("M-p p"             , spawnAndDo doPassBox "~/.config/dmscripts/dm-power")      -- dmenu Power
-    , ("M-p w"             , spawnAndDo doWeatherBox "~/.config/dmscripts/dm-weather") -- dmenu Check weather
+    , ("M-p v"             , spawnAndDo doWeatherBox "~/.config/dmscripts/dm-weather") -- dmenu Check weather
     , ("M-p j"             , spawn "passmenu -i -l 20 -p 'Password:'")                 -- dmenu Password Manager
-    , ("M-p v"             , spawn "~/.config/dmscripts/dm-wifi")                      -- dmenu Vifi connect
 
 
     -- Switchers 
