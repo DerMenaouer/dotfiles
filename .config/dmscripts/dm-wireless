@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source $HOME/.config/dmscripts/config/config
+
+
+
+
+wireless=$(printf 'Wifi\nBluetooth\nExit' | ${DMENU} 'Wireless:' "$@")
+
+if [ "$wireless" ]; then
+    case "${wireless}" in
+        'Wifi')
+            ssid=$(printf '' | ${DMENU} 'Wifi SSID:' "$@")
+            if [ "$ssid" ]; then
+                password=$( printf '' | ${DMENU} 'Wifi Passowrd:' "$@")
+                if [ "$password" ]; then
+                    nmcli device wifi connect "$ssid" password "$password"
+                    dunstify -i $HOME/.icons/notif/wifi.svg "Connected" "$ssid"
+                else
+                    echo "Program terminated." && exit 0
+                fi
+            else
+                echo "Program terminated." && exit 0
+            fi
+            ;;
+        'Bluetooth')
+            choice=$(printf 'ON\nOFF\nConnect' | ${DMENU} 'Bluetooth:' "$@")
+
+
+            if [ "$choice" ]; then
+                case "${choice}" in
+                    'ON')
+                        ./.local/bin/stay sudo systemctl restart bluetooth
+                        bluetoothctl power on
+                        ;;
+                    'OFF')
+                        bluetoothctl power off 
+                        ;;
+                    'Connect')
+                        device=$(bluetoothctl devices | awk '{ for (i=3; i<=NF; i++) printf "%s ", $i; print ""}' | sed 's/ *$//' | ${DMENU} "Devices:") 
+                        mac=$(bluetoothctl devices | grep "$device" | awk '{print $2}') 
+                        bluetoothctl power on && bluetoothctl connect $mac 
+                        ;;
+                esac
+
+            else
+                echo "Program terminated." && exit 0
+            fi
+            ;;
+        'Exit')
+
+            echo "Program terminated." && exit 0
+
+
+            ;;
+    esac
+else
+    echo "Program terminated." && exit 0
+fi
