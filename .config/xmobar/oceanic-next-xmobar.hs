@@ -35,7 +35,7 @@ Config {
       -- memory usage
       , Run Memory ["-t", "<fn=2>\xe266</fn> <used>M (<usedratio>%)"] 20
       -- network monitor
-      , Run Network "enp34s0" ["-t", "<fn=2>\xf0aa</fn> <tx>kb <fn=2>\xf0ab</fn> <rx>kb"] 20
+      , Run Network "wlp2s0f0u7" ["-t", "<fn=2>\xf0aa</fn> <tx>kb <fn=2>\xf0ab</fn> <rx>kb"] 20
       -- time and date
       , Run Date           "<fn=2>\xf18fa</fn> %d %b %y - (%H:%M)" "date" 50
       -- volume
@@ -50,5 +50,5 @@ Config {
     -- layout
     , sepChar =  "%"
     , alignSep = "}{"
-    , template = " <fc=#4285F4>%logo%</fc> | %UnsafeStdinReader% }{ <fn=1><fc=#ec5f67>%playing%</fc></fn>  <fc=#ec5f67>%pacupicon%  %pacup%</fc> | <fc=#c594c5>%cpu%</fc> | <fc=#c594c5>%cpu-temp-icon%%cpu-temp%</fc> | <fc=#fac863>%disku%</fc> | <fc=#99c794>%memory%</fc> | <fc=#99c794>%enp34s0%</fc> | <fc=#6699cc>%date%</fc> | <fc=#4285F4>%volicon% %vol%</fc> | <fc=#4285F4>%kbdicon%%kbd%</fc> "
+    , template = " <fc=#4285F4>%logo%</fc> | %UnsafeStdinReader% }{ <fn=1><fc=#ec5f67>%playing%</fc></fn>  <fc=#ec5f67>%pacupicon%  %pacup%</fc> | <fc=#c594c5>%cpu%</fc> | <fc=#c594c5>%cpu-temp-icon%%cpu-temp%</fc> | <fc=#fac863>%disku%</fc> | <fc=#99c794>%memory%</fc> | <fc=#99c794>%wlp2s0f0u7%</fc> | <fc=#6699cc>%date%</fc> | <fc=#4285F4>%volicon% %vol%</fc> | <fc=#4285F4>%kbdicon%%kbd%</fc> "
 
